@@ -8,7 +8,9 @@ Un trigger se puede considerar como un tipo de procedimiento almacenado que se a
 
 Los triggers se utilizan a menudo para mantener la integridad de los datos en una base de datos, por ejemplo, para actualizar una tabla relacionada cuando se insertan o eliminan datos en otra tabla. También se pueden utilizar para auditar los cambios en los datos o para aplicar reglas de seguridad en una base de datos.
 
-Un primer ejemplo. Un trigger para la auditoría de una tabla.
+## Un primer ejemplo muy bien documentado, podemos verlo aquí: https://www.postgresqltutorial.com/postgresql-triggers/creating-first-trigger-postgresql/
+
+## Un segundo ejemplo. Un trigger para la auditoría de una tabla.
 
 Implementamos un ejemplo de trigger que cada vez que se realiza una inserción, actualización o eliminación en la tabla "orders", se activa el trigger "audit_orders_trigger". 
 
