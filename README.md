@@ -48,3 +48,15 @@ Implementamos un ejemplo de trigger que cada vez que se realiza una inserción, 
 # La explicación
 
 Como podemos comprobar, cada vez que se realiza una inserción, actualización o eliminación en la tabla "orders", se activa el trigger "audit_orders_trigger". El trigger llama a la función "audit_orders()", que registra los cambios realizados en la tabla en un registro JSON y lo inserta en la tabla de auditoría "orders_audit". El registro JSON incluye información sobre la operación realizada (inserción, actualización o eliminación), la tabla en la que se realizó la operación, los valores antiguos y nuevos de la fila afectada y la marca de tiempo en la que se realizó la operación.
+
+## audit_row json
+
+Declaramos una variable llamada "audit_row" de tipo JSON. Esta variable se utiliza para almacenar los datos del registro de auditoría que se está creando dentro de la función del trigger.
+
+## Consideraciones
+
+En PostgreSQL, el tipo de datos JSON permite almacenar datos estructurados como objetos y arrays en formato JSON. En este caso, la variable "audit_row" se utiliza para almacenar los datos de auditoría en formato JSON antes de insertarlos en la tabla de auditoría.
+
+Al declarar la variable "audit_row" como tipo JSON, se garantiza que los datos que se inserten en la tabla de auditoría sean compatibles con el formato JSON y se puedan procesar adecuadamente en futuras consultas o análisis de datos.
+
+## Ahora, probad el trigger en Datagrip o vuestro editor favorito.
